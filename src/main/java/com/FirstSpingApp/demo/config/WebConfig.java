@@ -9,7 +9,7 @@ public class WebConfig implements WebMvcConfigurer {
 
     @Override
     public void addCorsMappings(CorsRegistry registry) {
-        registry.addMapping("/api/**").allowedOrigins("95.42.90.145").allowedMethods("*").allowedHeaders("*").allowCredentials(false).maxAge(3600);
+        registry.addMapping("/api/**").allowedOrigins("http://e-commerce-dev-front.herokuapp.com").allowedMethods("*").allowedHeaders("*").allowCredentials(false).maxAge(3600);
     }
 
 }
