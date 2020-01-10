@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+         http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+    <changeSet author="Nikolay" id="addForeignKeyConstraint-1">
+
+        <addForeignKeyConstraint baseColumnNames="category_id"
+                                 baseTableName="subcategories"
+                                 baseTableSchemaName="public"
+                                 constraintName="fk_categories_subcategory"
+                                 referencedColumnNames="id"
+                                 referencedTableName="categories"
+                                 referencedTableSchemaName="public"/>
+
+    </changeSet>
+
+    <changeSet author="Nikolay" id="addForeignKeyConstraint-2">
+
+        <addForeignKeyConstraint baseColumnNames="subcategory_id"
+                                 baseTableName="product"
+                                 baseTableSchemaName="public"
+                                 constraintName="fk_subcategory_product"
+                                 referencedColumnNames="id"
+                                 referencedTableName="subcategories"
+                                 referencedTableSchemaName="public"/>
+
+    </changeSet>
+
+    <changeSet author="Nikolay" id="addForeignKeyConstraint-3">
+
+        <addForeignKeyConstraint baseColumnNames="image_id"
+                                 baseTableName="product"
+                                 baseTableSchemaName="public"
+                                 constraintName="fk_image_product"
+                                 referencedColumnNames="id"
+                                 referencedTableName="images"
+                                 referencedTableSchemaName="public"/>
+
+    </changeSet>
+
+</databaseChangeLog>
